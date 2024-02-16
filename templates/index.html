@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filtres</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Filtres</h2>
+        <form method="POST" action="/">
+            <div class="input-row">
+                <div>
+                    <label for="negre">negre:</label>
+                    <input type="text" id="negre" name="negre" value="{{ request.form['negre'] }}">
+                </div>
+            </div>
+            <div class="input-row">
+                <div>
+                    <label for="groc_1">groc_1:</label>
+                    <input type="text" id="groc_1" name="groc_1" value="{{ request.form['groc_1'] }}">
+                </div>
+                <div>
+                    <label for="groc_2">groc_2:</label>
+                    <input type="text" id="groc_2" name="groc_2" value="{{ request.form['groc_2'] }}">
+                </div>
+                <div>
+                    <label for="groc_3">groc_3:</label>
+                    <input type="text" id="groc_3" name="groc_3" value="{{ request.form['groc_3'] }}">
+                </div>
+                <div>
+                    <label for="groc_4">groc_4:</label>
+                    <input type="text" id="groc_4" name="groc_4" value="{{ request.form['groc_4'] }}">
+                </div>
+                <div>
+                    <label for="groc_5">groc_5:</label>
+                    <input type="text" id="groc_5" name="groc_5" value="{{ request.form['groc_5'] }}">
+                </div>
+            </div>
+            <div class="input-row">
+                <div>
+                    <label for="verd_1">verd_1:</label>
+                    <input type="text" id="verd_1" name="verd_1" value="{{ request.form['verd_1'] }}">
+                </div>
+                <div>
+                    <label for="verd_2">verd_2:</label>
+                    <input type="text" id="verd_2" name="verd_2" value="{{ request.form['verd_2'] }}">
+                </div>
+                <div>
+                    <label for="verd_3">verd_3:</label>
+                    <input type="text" id="verd_3" name="verd_3" value="{{ request.form['verd_3'] }}">
+                </div>
+                <div>
+                    <label for="verd_4">verd_4:</label>
+                    <input type="text" id="verd_4" name="verd_4" value="{{ request.form['verd_4'] }}">
+                </div>
+                <div>
+                    <label for="verd_5">verd_5:</label>
+                    <input type="text" id="verd_5" name="verd_5" value="{{ request.form['verd_5'] }}">
+                </div>
+            </div>
+            <div class="input-row">
+                <div>
+                    <input type="submit" value="Fot-li">
+                </div>
+            </div>
+        </form>
+        {% for table in tables %}
+            {{ table|safe }}
+        {% endfor %}
+        <!-- <img src="../images/hist.png" alt="Histogram"> -->
+    </div>
+</body>
+</html>
