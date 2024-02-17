@@ -8,7 +8,7 @@ from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from bs4 import BeautifulSoup
 import requests
 from requests.exceptions import HTTPError
-import json
+# import json
 import unidecode
 
 import pandas as pd
@@ -100,7 +100,7 @@ def read_form(form_id):
     if len(value) == 0:
         return None
     else:
-        return str(value)
+        return str(value).lower()
 
 @app.route('/', methods=['GET', 'POST'])
 def read_filters():
